@@ -188,7 +188,9 @@ void task_sensor_update(void *parameters)
 							if ( p_task_sensor_dta->tick > 0 )
 							{
 								p_task_sensor_dta->tick --;
-
+								// tengo que salir del switch ya que el codigo tiene que ser no bloqueante
+								//si hago un while aca para decrecer el tick esto bloquea mi codigo
+								//y no hace nada mas mientras siga aca adentro
 							}
 							else
 							{
